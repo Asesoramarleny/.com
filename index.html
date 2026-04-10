@@ -108,11 +108,23 @@
         <div class="uso-card"><div class="uso-icono">🏭</div><div class="uso-titulo">Planta industrial con acceso directo</div><div class="uso-desc">Instala tu fábrica en una zona donde el transporte de insumos y productos terminados es ágil. La conectividad vial permite escalar operaciones sin complicaciones.</div></div>
         <div class="uso-card"><div class="uso-icono">⛽</div><div class="uso-titulo">Negocio para alto tránsito (servicios)</div><div class="uso-desc">Desarrolla grifos, talleres, restaurantes o servicios para transportistas. El constante paso de vehículos garantiza demanda continua y flujo de clientes.</div></div>
       </div>
-      <div class="usos-visual">
-        <div class="usos-main-img">🌄</div>
-        <div class="usos-badge"><div class="usos-badge-num">+30%</div><div class="usos-badge-label">Plusvalía promedio</div></div>
-      </div>
+     <div class="usos-visual">
+  <div class="slider">
+    <div class="slides" id="slides">
+      <img src="Foto/Foto1.jpeg" class="slide" />
+      <img src="Foto/Foto2.jpeg" class="slide" />
+      <img src="Foto/Foto3.jpeg" class="slide" />
+      <img src="Foto/Foto4.jpeg" class="slide" />
+      <img src="Foto/Foto5.jpeg" class="slide" />
     </div>
+
+    <!-- Botones -->
+    <button class="prev" onclick="moveSlide(-1)">❮</button>
+    <button class="next" onclick="moveSlide(1)">❯</button>
+  </div>
+
+<div class="usos-badge"><div class="usos-badge-num">+40%</div><div class="usos-badge-label">Zona logística estratégica</div></div>
+</div>
   </section>
 
   <section id="mapa">
@@ -167,7 +179,51 @@
     <div class="footer-logo">TierrasEnChancay</div>
     <div class="footer-copy">2026 Tierras En Chancay - Lima, Perú</div>
   </footer>
-  
+
   <script src="script.js"></script>
+
+<script>
+let index = 0;
+let isMoving = false; // 🔥 bloqueo
+
+const slides = document.getElementById("slides");
+
+// clonar primera imagen
+const firstClone = slides.children[0].cloneNode(true);
+slides.appendChild(firstClone);
+
+const totalSlides = slides.children.length;
+
+function updateSlide() {
+  slides.style.transition = "transform 0.5s ease-in-out";
+  slides.style.transform = "translateX(-" + (index * 100) + "%)";
+}
+
+function moveSlide(step) {
+  if (isMoving) return; // 🔥 evita clicks rápidos
+  isMoving = true;
+
+  index += step;
+  updateSlide();
+}
+
+// cuando termina animación
+slides.addEventListener("transitionend", () => {
+  // reset invisible
+  if (index === totalSlides - 1) {
+    slides.style.transition = "none";
+    index = 0;
+    slides.style.transform = "translateX(0)";
+  }
+
+  isMoving = false; // 🔥 desbloquea
+});
+
+// automático
+setInterval(() => {
+  moveSlide(1);
+}, 5000);
+</script>
+
 </body>
 </html>
