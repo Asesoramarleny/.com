@@ -304,37 +304,8 @@
 .prev { left: 10px; }
 .next { right: 10px; }
 
-
-/* 📱 Ajuste para celular */
 @media (max-width: 768px) {
 
-  .container {
-    flex-direction: column; /* si usas flex */
-    /* o grid-template-columns: 1fr; si usas grid */
-  }
-
-  .usos-visual {
-    width: 100%;
-  }
-
-  .slider {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .slide {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .container {
-    display: flex;
-    flex-direction: column !important;
-  }
 
   .usos-visual {
     width: 100% !important;
@@ -342,7 +313,4 @@
     min-height: 300px;
   }
 
-  .slider {
-    width: 100% !important;
-  }
 }
