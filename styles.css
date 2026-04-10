@@ -93,7 +93,7 @@
     .uso-desc { font-size: 13px; color: var(--crema-apagada); line-height: 1.6; font-weight: 300; }
     .usos-visual { position: relative; height: 440px; }
     .usos-main-img { width: 100%; height: 100%; border-radius: 20px; background: linear-gradient(145deg,#1c3320,#2d5226); display: flex; align-items: center; justify-content: center; font-size: 80px; opacity: 0.5; border: 1px solid var(--borde); }
-    .usos-badge { position: absolute; bottom: -16px; left: -16px; background: var(--dorado); color: #0e1a0f; border-radius: 14px; padding: 18px 22px; font-weight: 500; }
+    .usos-badge { position: absolute; bottom: -25px; left: -16px; background: var(--dorado); color: #0e1a0f; border-radius: 14px; padding: 18px 22px; font-weight: 500; }
     .usos-badge-num { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; line-height: 1; }
     .usos-badge-label { font-size: 12px; margin-top: 2px; }
 
@@ -259,5 +259,90 @@
   footer {
     flex-direction: center;
     text-align: center;
+  }
+}
+
+
+.usos-visual {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  display: block;
+}
+
+/* Botones */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(50, 50, 50, 0.5);
+  color: #e8c96a;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+
+/* 📱 Ajuste para celular */
+@media (max-width: 768px) {
+
+  .container {
+    flex-direction: column; /* si usas flex */
+    /* o grid-template-columns: 1fr; si usas grid */
+  }
+
+  .usos-visual {
+    width: 100%;
+  }
+
+  .slider {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .slide {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .container {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .usos-visual {
+    width: 100% !important;
+    display: block !important;
+    min-height: 300px;
+  }
+
+  .slider {
+    width: 100% !important;
   }
 }
