@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TierrasEnChancay — Terrenos en Lima</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="splash">
+    <div class="splash-content">
+      <div class="splash-logo">Tierras En Chancay</div>
+      <div class="splash-linea"></div>
+      <div class="splash-tagline">Lima & alrededores</div>
+      <div class="splash-barra">
+        <div class="splash-progreso"></div>
+      </div>
+    </div>
+  </div>
+
+  <nav>
+    <div class="nav-logo">Tierras En Chancay</div>
+    <ul class="nav-links">
+      <li><a href="#terrenos">Terrenos</a></li>
+      <li><a href="#usos">Que hacer aqui</a></li>
+      <li><a href="#mapa">Ubicacion</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Consultar ahora</button>
+  </nav>
+
+  <header class="hero" id="inicio">
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Lima & alrededores</div>
+      <h1 class="hero-title">Tu terreno,<br>tu <em>futuro.</em></h1>
+      <p class="hero-desc">
+        A pocos minutos del Puerto de Chancay y a lo largo de la estratégica Panamericana Norte, se abren oportunidades únicas para quienes saben ver más allá.
+        Asegura hoy tu terreno industrial en una zona de alto crecimiento, perfecta para logística, almacenes y expansión empresarial. Conecta tu inversión con el desarrollo del comercio internacional y sé parte del nuevo eje económico del país.
+        <strong>No esperes a que suban los precios… invierte ahora</strong>
+      </p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="document.getElementById('usos').scrollIntoView({behavior:'smooth'})">¿Por qué invertir?</button>
+      </div>
+    </div>
+
+    <div class="hero-media">
+      <video autoplay muted loop playsinline>
+        <source src="video/Terrenos2.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="asesor-box">
+    <img src="Foto/Asesora.jpeg" alt="Asesor de terrenos" class="asesor-img">
+  </div>
+
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-num">24+</div>
+      <div class="hero-stat-label">Terrenos disponibles</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">100%</div>
+      <div class="hero-stat-label">Títulos en regla</div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">Explorar</div>
+</header>
+
+  <section id="terrenos">
+    <div class="terrenos-header">
+      <div>
+        <h2 class="section-title">Encuentra tu<br>Lote ideal</h2>
+      </div>
+      <p class="section-sub">Ideal para: Almacenes, logística, fábricas, distribución.</p>
+    </div>
+    <div class="terrenos-grid">
+      <div class="terreno-card">
+        <div class="terreno-foto" style="background-image: url('Foto/Foto.jpeg'); background-size: cover; background-position: center;">
+          <div class="foto-placeholder">🌿</div>
+          <div class="terreno-tag">Industrial</div>
+        </div>
+        <div class="terreno-info">
+          <div class="terreno-nombre">Lotes Industriales</div>
+          <div class="terreno-detalle"><span>500 m2</span><span>Chancay</span></div>
+          <div class="terreno-footer">
+            <div class="terreno-precio">Desde S/ 95,000</div>
+            <button class="terreno-btn" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Consultar</button>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section id="usos">
+    <p class="section-eyebrow">Posibilidades</p>
+    <h2 class="section-title">Qué puedes hacer<br>en tu terreno</h2>
+    <div class="usos-layout">
+      <div class="usos-grid">
+        <div class="uso-card"><div class="uso-icono">🚛</div><div class="uso-titulo">Centro logístico estratégico</div><div class="uso-desc">Ubicación ideal para almacenamiento y distribución gracias al alto flujo vehicular de la Panamericana y la cercanía al puerto. Perfecto para empresas que necesitan mover mercancía rápido.</div></div>
+        <div class="uso-card"><div class="uso-icono">📦</div><div class="uso-titulo">Hub de comercio internacional</div><div class="uso-desc">Aprovecha la conexión directa con el puerto para importar y exportar productos. Reduce tiempos y costos logísticos al estar a minutos de una zona clave de comercio.</div></div>
+        <div class="uso-card"><div class="uso-icono">🏭</div><div class="uso-titulo">Planta industrial con acceso directo</div><div class="uso-desc">Instala tu fábrica en una zona donde el transporte de insumos y productos terminados es ágil. La conectividad vial permite escalar operaciones sin complicaciones.</div></div>
+        <div class="uso-card"><div class="uso-icono">⛽</div><div class="uso-titulo">Negocio para alto tránsito (servicios)</div><div class="uso-desc">Desarrolla grifos, talleres, restaurantes o servicios para transportistas. El constante paso de vehículos garantiza demanda continua y flujo de clientes.</div></div>
+      </div>
+      <div class="usos-visual">
+        <div class="usos-main-img">🌄</div>
+        <div class="usos-badge"><div class="usos-badge-num">+30%</div><div class="usos-badge-label">Plusvalía promedio</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mapa">
+    <p class="section-eyebrow">Ubicaciones</p>
+    <h2 class="section-title">Dónde están<br>los terrenos</h2>
+    <div class="mapa-container">
+      <div class="mapa-icon">📍</div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d125103.36152420494!2d-77.3983532!3d-11.5173817!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91068d0059ee670b%3A0xdead2ba98fd0fcf2!2sIndustrias%20100!5e0!3m2!1ses!2spe!4v1775004752419!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <p class="section-eyebrow">Hablemos</p>
+    <h2 class="section-title">Te interesa<br>algún terreno</h2>
+    <div class="contacto-grid">
+<form action="https://formspree.io/f/meepzjql" method="POST" class="contacto-form" id="miFormulario">
+    <div class="form-group">
+        <label class="form-label">Tu nombre</label>
+        <input class="form-input" type="text" name="nombre" placeholder="Ej: Juan Perez" required>
+    </div>
+    <div class="form-group">
+        <label class="form-label">Telefono / WhatsApp</label>
+        <input class="form-input" type="tel" name="telefono" placeholder="987654321" required>
+    </div>
+    <div class="form-group">
+        <label class="form-label">Mensaje</label>
+        <textarea class="form-textarea" name="mensaje" placeholder="¿Alguna pregunta?"></textarea>
+    </div>
+    
+    <button type="submit" class="btn-form">Enviar consulta por Correo</button>
+   
+    <button type="button" id="btnWhatsapp" class="btn-whatsapp">Consultar por WhatsApp </button>    
+</form>
+
+    <div class="contacto-info">
+        <div class="info-item"><div class="info-icono">📞</div><div><div class="info-titulo">Llámanos</div><div class="info-valor">+51 924451087</div></div></div>
+        <div class="info-item"><div class="info-icono">✉</div><div><div class="info-titulo">Correo</div><div class="info-valor">Monsefumarleny@gmail.com</div></div></div>
+        <div class="garantias">
+          <div class="garantias-titulo">Garantías</div>
+          <div class="garantia-item"><div class="garantia-check">✓</div>Asesoría legal gratuita</div>
+          <div class="garantia-item"><div class="garantia-check">✓</div>Financiamiento propio</div>
+          <div class="garantia-item"><div class="garantia-check">✓</div>Visitas sin costo</div>
+          <div class="garantia-item"><div class="garantia-check">✓</div>Los Domingos el viaje con nosotros es gratis</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <footer>
+    <div class="footer-logo">TierrasEnChancay</div>
+    <div class="footer-copy">2026 TierrasEnChancay - Lima, Perú</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
